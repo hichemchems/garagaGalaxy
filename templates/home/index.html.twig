@@ -1,24 +1,137 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper {
-        margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; 
-    }
-    .example-wrapper code {
-        background: #F5F5F5; padding: 2px 6px;
-    }
-</style>
+    <section class="banner">
+        <div class="title">
+            <h1>Welcome to My Website!</h1>
+            <p class="slogan">Here is some content about the website.</p>
+        </div>
+    </section>
+{# 
+    <section class="rdv-container container">
+        <ul>
+            <li>PRISE DE RENDEZ-VOUS VIA NOTRE FORMULAIRE</li>
+            <li><button class="rdv-btn">PRENDRE UN RENDEZ-VOUS</button></li>
+        </ul>
+    </section> #}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <section class="fonctionalities container my-5">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/wamp64/www/test2/Garage2000/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/wamp64/www/test2/Garage2000/templates/home/index.html.twig</code></li>
-    </ul>
+        <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 text-center">FONCTIONALITIES</h2>
+
+        <div class="fonctionnalities-container containerd-flex justify-content-around px-5">
+            <article class="fonctionalities-card mx-5">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>VENTE DE VÉHICULES D'OCCASION</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dicta et quidem obcaecati, culpa rerum itaque atque? Labore, eaque quod odio molestias iste fuga excepturi?</p>
+            </article>
+
+            <article class="fonctionalities-card mx-5">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>SERVICES DE REPARATIONS</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente fuga enim dolor sed, dolores, doloremque obcaecati dolorum similique cum asperiores temporibus dicta, quo suscipit consequatur.</p>
+            </article>
+        </div>
+
+    </section>
+
+    <section classe="occasion my-5">
+        <h2 class="display-5 fw-bold text-center">NOS OCCASIONS</h2>
+
+        <div class="row text-center my-3 ">
+
+            <div class="col-sm my-2 container">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x150" class="card-img" alt="CITROEN C3">
+                    <div class="card-body">
+                        <h5 class="card-title">Voiture</h5>
+                        <p class="card-text">Année : </p>
+                        <p class="card-text">xxxxx €</p>
+                        <p class="card-text">xxxxxx Km</p>
+                        
+                        <a href="occasion.php?id=8" class="btn btn-secondary" previewlistener="true">Détails</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm my-2">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x150" class="card-img" alt="RENAULT Trafic Fourgon">
+                    <div class="card-body">
+                        <h5 class="card-title">Voiture</h5>
+                        <p class="card-text">Année : </p>
+                        <p class="card-text">xxxxx €</p>
+                        <p class="card-text">xxxxxx Km</p>
+                        
+                        <a href="occasion.php?id=7" class="btn btn-secondary" previewlistener="true">Détails</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm my-2">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x150" class="card-img" alt="FIAT DOBLO CARGO">
+                    <div class="card-body">
+                        <h5 class="card-title">Voiture</h5>
+                        <p class="card-text">Année : </p>
+                        <p class="card-text">xxxxx €</p>
+                        <p class="card-text">xxxxxx Km</p>
+                        
+                        <a href="occasion.php?id=6" class="btn btn-secondary" previewlistener="true">Détails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary" previewlistener="true">Nos occasions</a>
+        </div>
+    </section>
+
+    <section class="avis-container my-5">
+        <h2 class="display-5 fw-bold text-center">Avis des clients</h2>
+        <div id="carouselAvis" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="media">
+                        <div class="media-body text-center">
+                            <h5 class="mt-0">Nom de l'auteur 1</h5>
+                            <p>
+                            <span class="badge badge-primary">4 étoiles</span>
+                            <br>
+                            Texte de l'avis 1...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="media">
+                        <div class="media-body text-center">
+                            <h5 class="mt-0">Nom de l'auteur 2</h5>
+                            <p>
+                            <span class="badge badge-primary">5 étoiles</span>
+                            <br>
+                            Texte de l'avis 2...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselAvis" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Précédent</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselAvis" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
+            </a>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary" previewlistener="true">Ajouter un avis</a>
+        </div>
+    </section>
 </div>
+
+
+
+
 {% endblock %}

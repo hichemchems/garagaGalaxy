@@ -1,3 +1,72 @@
-body {
-    background-color: skyblue;
+*,
+html,
+::before,
+::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style-type:none;
+}
+
+
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+h1{
+  text-align :center;
+}
+
+/* =========================================================================
+  BANNIÈRE
+   ========================================================================= */
+  
+.banner{
+  position: relative;
+  background-image: url('../images/audi-car1.jpg');
+  width: 100%;
+  min-height: 40rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    min-height: 20rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .banner {
+    min-height: 15rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner {
+    min-height: 10rem;
+  }
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+
+
+/* =========================================================================
+  RENDEZ VOUS
+   ========================================================================= */
+
+.fonctionnalities-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
 }
