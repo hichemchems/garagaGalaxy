@@ -17,10 +17,10 @@ class Voitures
     private ?string $Marque = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Model = null;
+    private ?string $Modele = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Année = null;
+    private ?string $Annee = null;
 
     #[ORM\Column(length: 255)]
     private ?string $Motorisation = null;
@@ -51,26 +51,26 @@ class Voitures
         return $this;
     }
 
-    public function getModel(): ?string
+    public function getModele(): ?string
     {
-        return $this->Model;
+        return $this->Modele;
     }
 
-    public function setModel(string $Model): static
+    public function setModel(string $Modele): static
     {
-        $this->Model = $Model;
+        $this->Modele = $Modele;
 
         return $this;
     }
 
-    public function getAnnée(): ?string
+    public function getAnnee(): ?string
     {
-        return $this->Année;
+        return $this->Annee;
     }
 
-    public function setAnnée(string $Année): static
+    public function setAnnee(string $Annee): static
     {
-        $this->Année = $Année;
+        $this->Annee = $Annee;
 
         return $this;
     }
