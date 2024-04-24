@@ -3,7 +3,7 @@
   "type": "project",
   "license": "proprietary",
   "description": "A minimal Symfony project recommended to create bare bones applications",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": false,
   "require": {
     "php": ">=8.2",
@@ -14,7 +14,6 @@
     "doctrine/doctrine-migrations-bundle": "^3.3",
     "doctrine/mongodb-odm-bundle": "^5.0",
     "doctrine/orm": "^3.1",
-    "doctrine/persistence": "3.4.*",
     "easycorp/easyadmin-bundle": "^4",
     "mongodb/mongodb": "^1.18",
     "phpdocumentor/reflection-docblock": "^5.3",
