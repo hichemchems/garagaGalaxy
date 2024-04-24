@@ -7,6 +7,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Exception;
 use MongoDB\Client;
+use App\Document\Avis;
+use Doctrine\ODM\MongoDB\DocumentManager;
+
 
 class MongoDBController extends AbstractController
 {
@@ -29,23 +32,5 @@ class MongoDBController extends AbstractController
 
         return $this->render('mongo_db/index.html.twig');
 }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
