@@ -1,0 +1,8 @@
+doctrine_mongodb:
+  connections:
+    default:
+      server:
+        uri: "mongodb+srv://hichemdjacta:hichemgarage123321@galaxygarageparis.qskdsk3.mongodb.net/"
+      options:
+        # Optional options (example: reconnect timeout)
+        # reconnectTimeout: 10000  # milliseconds
