@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33307876e7ce29e8815ad5e152395155",
+    "content-hash": "ee336ad8f8c1257711f096c6eb367b98",
     "packages": [
         {
             "name": "composer/semver",
@@ -975,12 +975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "95d39373339a42007848a9c06ddaf1be6ede0776"
+                "reference": "7780f8d3a67013a0064ade409fdb28287f70462c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/95d39373339a42007848a9c06ddaf1be6ede0776",
-                "reference": "95d39373339a42007848a9c06ddaf1be6ede0776",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/7780f8d3a67013a0064ade409fdb28287f70462c",
+                "reference": "7780f8d3a67013a0064ade409fdb28287f70462c",
                 "shasum": ""
             },
             "require": {
@@ -1069,7 +1069,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-22T20:43:31+00:00"
+            "time": "2024-04-24T05:24:51+00:00"
         },
         {
             "name": "doctrine/mongodb-odm",
@@ -1077,12 +1077,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/mongodb-odm.git",
-                "reference": "78ea995d89e2dccc33bf69d9ad8c4486e1fb267c"
+                "reference": "48c10d42a41c1c8e9af29203bfd4c8fc70ee4bcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/78ea995d89e2dccc33bf69d9ad8c4486e1fb267c",
-                "reference": "78ea995d89e2dccc33bf69d9ad8c4486e1fb267c",
+                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/48c10d42a41c1c8e9af29203bfd4c8fc70ee4bcf",
+                "reference": "48c10d42a41c1c8e9af29203bfd4c8fc70ee4bcf",
                 "shasum": ""
             },
             "require": {
@@ -1183,7 +1183,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-22T14:44:57+00:00"
+            "time": "2024-04-23T13:21:02+00:00"
         },
         {
             "name": "doctrine/mongodb-odm-bundle",
@@ -1887,12 +1887,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "e3a588407120d0ac9f3cf7b23fb739fc79d95340"
+                "reference": "d6333d78d502e7e8c7d4d07edb55a0b16c5c87de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/e3a588407120d0ac9f3cf7b23fb739fc79d95340",
-                "reference": "e3a588407120d0ac9f3cf7b23fb739fc79d95340",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/d6333d78d502e7e8c7d4d07edb55a0b16c5c87de",
+                "reference": "d6333d78d502e7e8c7d4d07edb55a0b16c5c87de",
                 "shasum": ""
             },
             "require": {
@@ -1957,7 +1957,7 @@
                 "issues": "https://github.com/mongodb/mongo-php-library/issues",
                 "source": "https://github.com/mongodb/mongo-php-library/tree/master"
             },
-            "time": "2024-04-19T17:15:02+00:00"
+            "time": "2024-04-23T19:24:06+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -6934,7 +6934,7 @@
                 "symfony-ux"
             ],
             "support": {
-                "source": "https://github.com/symfony/stimulus-bundle/tree/2.x"
+                "source": "https://github.com/symfony/stimulus-bundle/tree/v2.17.0"
             },
             "funding": [
                 {
@@ -7624,7 +7624,7 @@
                 "turbo-stream"
             ],
             "support": {
-                "source": "https://github.com/symfony/ux-turbo/tree/2.x"
+                "source": "https://github.com/symfony/ux-turbo/tree/v2.17.0"
             },
             "funding": [
                 {
@@ -8181,12 +8181,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "861c76cb004214612fff67b35de1e6c76146309b"
+                "reference": "4a7de4ab5603ad8f199222cae3951fc271a8c45d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/861c76cb004214612fff67b35de1e6c76146309b",
-                "reference": "861c76cb004214612fff67b35de1e6c76146309b",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4a7de4ab5603ad8f199222cae3951fc271a8c45d",
+                "reference": "4a7de4ab5603ad8f199222cae3951fc271a8c45d",
                 "shasum": ""
             },
             "require": {
@@ -8253,7 +8253,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-19T14:51:07+00:00"
+            "time": "2024-04-24T06:21:14+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -10291,12 +10291,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "e7ea13d3b708203f99f3e7cffe13b3374096d7a0"
+                "reference": "ed3465b82ae7748df129429b66e2e061507cd3ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/e7ea13d3b708203f99f3e7cffe13b3374096d7a0",
-                "reference": "e7ea13d3b708203f99f3e7cffe13b3374096d7a0",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/ed3465b82ae7748df129429b66e2e061507cd3ed",
+                "reference": "ed3465b82ae7748df129429b66e2e061507cd3ed",
                 "shasum": ""
             },
             "require": {
@@ -10376,7 +10376,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-21T09:01:23+00:00"
+            "time": "2024-04-24T09:01:22+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
