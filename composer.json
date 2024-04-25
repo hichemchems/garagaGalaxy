@@ -49,8 +49,8 @@
     "symfony/yaml": "7.0.*",
     "twig/twig": "^2.12|^3.0",
     "symfony/uid": "7.0",
-    "symfonycasts/verify-email-bundle": "v1.17.0",
-    "twig/extra-bundle": "v3.9.3"
+    "symfonycasts/verify-email-bundle": "1.17.0",
+    "twig/extra-bundle": "3.9.3"
   },
   "config": {
     "allow-plugins": {
