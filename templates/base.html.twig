@@ -22,7 +22,7 @@
 
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ path('app_home') }}">
                     <img src="{{asset('../assets/logo/Garage2007Logo.png')}}" alt="Logo" width="100" height="56.4" class="d-inline-block align-text-top">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,17 +31,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_nos_service') }}">Nos services</a>
+                            <a class="nav-link" href="#">Nos services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contact">Contactez-nous</a>
+                            <a class="nav-link" href="#">Contactez-nous</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/about">A propos</a>
+                            <a class="nav-link" href="#">A propos</a>
                         </li>
                     </ul>
                     <div class="d-flex justify-content-end align-items-center">
-                        <a class="btn btn-primary" href="{{path('app_register')}}" role="button">Espace Professionnel</a>
+                        <a class="btn btn-primary" href="{{path('app_login')}}" role="button">Espace Professionnel</a>
                     </div>
                 </div>
             </div>

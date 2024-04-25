@@ -13,8 +13,8 @@ class VoituresType extends AbstractType
     {
         $builder
             ->add('Marque')
-            ->add('Model')
-            ->add('Année')
+            ->add('Modele')
+            ->add('Annee')
             ->add('Motorisation')
             ->add('Immatriculation')
             ->add('Kilometrage')

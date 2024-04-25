@@ -56,7 +56,7 @@ class Voitures
         return $this->Modele;
     }
 
-    public function setModel(string $Modele): static
+    public function setModele(string $Modele): static
     {
         $this->Modele = $Modele;
 

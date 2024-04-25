@@ -39,8 +39,22 @@
         <h2 class="display-5 fw-bold text-center">NOS OCCASIONS</h2>
 
         <div class="row text-center my-3 ">
-
+            {% for item in voiture %}
             <div class="col-sm my-2 container">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x150" class="card-img" alt="CITROEN C3">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.marque }} {{ item.modele }}</h5>
+                        <p class="card-text">Année : {{ item.annee }}</p>
+                        <p class="card-text">{{ item.prix }} €</p>
+                        <p class="card-text">{{ item.kilometrage }} Km</p>
+                        
+                        <a href="occasion.php?id=8" class="btn btn-secondary" previewlistener="true">Détails</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {# <div class="col-sm my-2 container">
                 <div class="card">
                     <img src="https://via.placeholder.com/350x150" class="card-img" alt="CITROEN C3">
                     <div class="card-body">
@@ -80,7 +94,7 @@
                         <a href="occasion.php?id=6" class="btn btn-secondary" previewlistener="true">Détails</a>
                     </div>
                 </div>
-            </div>
+            </div> #}
         </div>
         <div class="d-flex justify-content-center">
             <a href="#" class="btn btn-primary" previewlistener="true">Nos occasions</a>
