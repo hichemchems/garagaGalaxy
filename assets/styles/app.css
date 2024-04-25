@@ -15,6 +15,10 @@ a{
   color: unset;
 }
 
+.p-5 {
+  padding: 1rem !important;
+}
+
 .one{
 
     display: flex;
@@ -135,19 +139,53 @@ ul{
 
   color: black;
 }
+.textCenter{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 80%;
+}
+
+
+
+/*modal*/
+
+
+
+
 
 
 @media (max-width: 420px) {
   .sidebar li .tooltip {
     display: none;
   }
+
+  .d-flex{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .fonctionnalities-container{
+    display: flex;
+    flex-direction: column;
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+    width: 100%;
 }
+
+
+  }
+
 
 
 @media (max-width: 768px) {
   .banner {
     min-height: 20rem;
   }
+
 }
 
 @media (max-width: 425px) {
