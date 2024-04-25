@@ -3,7 +3,7 @@
   "type": "project",
   "license": "proprietary",
   "description": "A minimal Symfony project recommended to create bare bones applications",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": false,
   "require": {
     "php": ">=8.2",
