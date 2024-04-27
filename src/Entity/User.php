@@ -71,6 +71,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // guarantee every user at least has ROLE_USER
         $roles[] = 'ROLE_USER';
 
+        // check if the user has the ROLE_ADMIN role
+        if (in_array('ROLE_ADMIN', $this->roles)) {
+            $roles[] = 'ROLE_ADMIN';
+        }
+
         return array_unique($roles);
     }
 
@@ -82,6 +87,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->roles = $roles;
 
         return $this;
+    }
+
+    public function isGranted($role)
+    {
+        return in_array($role, $this->getRoles());
     }
 
     /**

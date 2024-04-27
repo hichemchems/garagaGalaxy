@@ -47,8 +47,11 @@ class AdminDashboardController extends AbstractDashboardController
         // yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
         yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'app_home');
-        yield MenuItem::linktoRoute('New Register', 'fas fa-home', 'app_register');
-        yield MenuItem::linkToCrud('user', 'fas fa-map-marker-alt', User::class);
+        //yield MenuItem::linktoRoute('New Register', 'fas fa-home', 'app_register');
+        // check if the user has the ROLE_ADMIN role
+        if ($this->isGranted('ROLE_ADMIN')) {
+            yield MenuItem::linkToCrud('user', 'fas fa-map-marker-alt', User::class);
+        }
         yield MenuItem::linkToCrud('voiture', 'fas fa-comments', Voitures::class);
     }
 }
