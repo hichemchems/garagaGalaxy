@@ -37,7 +37,9 @@
 
     <section classe="occasion my-5">
         <h2 class="display-5 fw-bold text-center">NOS OCCASIONS</h2>
-
+    <div class="button">  
+        <a href="#" class="btn btn-primary" previewlistener="true">Nos occasions</a>
+    </div>
         <div class="row text-center my-3 ">
             {% for item in voiture %}
             <div class="col-sm my-2 container">
@@ -48,11 +50,16 @@
                         <p class="card-text">Année : {{ item.annee }}</p>
                         <p class="card-text">{{ item.prix }} €</p>
                         <p class="card-text">{{ item.kilometrage }} Km</p>
+                    <div class="button">    
+
+                        <a href="occasion.php?id=8" class="btn btn-primary" previewlistener="true">Détails</a>
                         
-                        <a href="occasion.php?id=8" class="btn btn-secondary" previewlistener="true">Détails</a>
+
+                    </div>
                     </div>
                 </div>
             </div>
+            
             {% endfor %}
             {# <div class="col-sm my-2 container">
                 <div class="card">
@@ -96,9 +103,7 @@
                 </div>
             </div> #}
         </div>
-        <div class="d-flex justify-content-center">
-            <a href="#" class="btn btn-primary" previewlistener="true">Nos occasions</a>
-        </div>
+        
     </section>
 
     <section class="avis-container my-5">
@@ -139,7 +144,7 @@
                 <span class="sr-only">Suivant</span>
             </a>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="button">  
             <a href="#" class="btn btn-primary" previewlistener="true">Ajouter un avis</a>
         </div>
     </section>
