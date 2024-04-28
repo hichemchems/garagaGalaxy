@@ -7,8 +7,13 @@ html,
   box-sizing: border-box;
   scroll-behavior: smooth;
   list-style-type:none;
+  
 }
 
+.navbar{
+  margin: 1%;
+  background-color: rgb(255, 255, 255);
+}
 
 a{
   text-decoration: none;
@@ -27,21 +32,70 @@ a{
     min-height: 100vh;
 }
 
+.one .container-fluid {
+
+  background: linear-gradient(45deg, #676262, transparent);
+}
+
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
 .oneTwo{
   display: flex;
   align-items: center;
   justify-content: center;
+  /*margin-left: 25%;*/
+    
+}
+.politique{
+    display: block !important; 
+    margin: 3%;
+}
+.two{
+  align-items: center;
+  width: 50%;
     
 }
 
-.two{
+form {
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column;
   align-items: center;
-    
+  width: 44%;
+  /*background: linear-gradient(45deg, #676262, transparent);*/
 }
+
+input{
+    border-radius: 10px;
+    border-color: unset;
+    line-height: 1.5;
+    color: var(--bs-body-color) !important;
+    background-color: var(--bs-body-bg) !important;
+    border: var(--bs-border-width) solid var(--bs-border-color) !important;
+    border-radius: var(--bs-border-radius) !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+
+.bntRegister{
+
+  margin-bottom: 5%;
+}
+
+.button{
+    display: flex;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+
 h1{
   text-align :center;
   color: aliceblue;
   font-weight: bold;
+  font-size: 6rem;
 }
 
 main{
@@ -56,19 +110,12 @@ main{
   position: relative;
   background-image: url('../images/audi-car1.jpg');
   width: 100%;
-  min-height: 40rem;
+  min-height: 36rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-form {
-  display: flex !important;
-  justify-content: center !important;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(45deg, #676262, transparent);
-}
 
 
 .form-control{
