@@ -11,7 +11,8 @@ html,
 }
 
 .navbar{
-  margin: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
   background-color: rgb(255, 255, 255);
 }
 
@@ -24,6 +25,10 @@ a{
   padding: 1rem !important;
 }
 
+body{
+  background-image: url(../images/1200-L-logo-voiture-que-signifient-ces-symboles-automobiles.jpg);
+}
+
 .one{
 
     display: flex;
@@ -34,13 +39,14 @@ a{
 
 .one .container-fluid {
 
-  background: linear-gradient(45deg, #676262, transparent);
+  background: linear-gradient(45deg, #676262, #676262);
 }
 
 .container-fluid {
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
+
 
 .oneTwo{
   display: flex;
@@ -107,13 +113,16 @@ main{
    ========================================================================= */
   
 .banner{
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url('../images/audi-car1.jpg');
   width: 100%;
   min-height: 36rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 37rem;
 }
 
 
@@ -152,10 +161,13 @@ ul{
 
 .title {
   position: absolute;
+ display: flex;
+ flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
+  margin-top: 6%;
 }
 
 
