@@ -107,7 +107,9 @@ main{
    ========================================================================= */
   
 .banner{
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url('../images/audi-car1.jpg');
   width: 100%;
   min-height: 36rem;
@@ -152,10 +154,13 @@ ul{
 
 .title {
   position: absolute;
+ display: flex;
+ flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
+  margin-top: 6%;
 }
 
 
