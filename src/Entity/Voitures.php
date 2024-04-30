@@ -34,6 +34,9 @@ class Voitures
     #[ORM\Column]
     private ?int $Prix = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $images = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +122,18 @@ class Voitures
     public function setPrix(int $Prix): static
     {
         $this->Prix = $Prix;
+
+        return $this;
+    }
+
+    public function getImages(): ?string
+    {
+        return $this->images;
+    }
+
+    public function setImages(string $images): static
+    {
+        $this->images = $images;
 
         return $this;
     }

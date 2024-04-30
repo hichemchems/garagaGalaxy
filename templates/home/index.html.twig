@@ -44,7 +44,7 @@
             {% for item in voiture %}
             <div class="col-sm my-2 container">
                 <div class="card">
-                    <img src="https://via.placeholder.com/350x150" class="card-img" alt="CITROEN C3">
+                    <img src="/images/{{item.images}}" class="card-img" alt="CITROEN C3">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.marque }} {{ item.modele }}</h5>
                         <p class="card-text">Année : {{ item.annee }}</p>
@@ -57,7 +57,7 @@
 
                     </div>
                     </div>
-                </div>
+                </img>
             </div>
             
             {% endfor %}
