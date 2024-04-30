@@ -4,9 +4,10 @@
 
 {% block body %}
     <h1>Register</h1>
-
+    <section class="oneTwo" style= "margin-left: 25%";>
     {{ form_errors(registrationForm) }}
 
+    <div class="two">
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
@@ -16,4 +17,6 @@
 
         <button type="submit" class="btn">Register</button>
     {{ form_end(registrationForm) }}
+    </div>
+    </section>
 {% endblock %}
