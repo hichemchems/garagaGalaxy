@@ -55,6 +55,6 @@ class AdminDashboardController extends AbstractDashboardController
             yield MenuItem::linkToCrud('user', 'fas fa-map-marker-alt', User::class);
         }
         yield MenuItem::linkToCrud('voiture', 'fas fa-comments', Voitures::class);
-        yield MenuItem::linkToRoute('avis', 'fas fa-comments', 'app_avis_clients');
+        yield MenuItem::linkToCrud('avis', 'fas fa-comments', AvisClients::class);
     }
 }
