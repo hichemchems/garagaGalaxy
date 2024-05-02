@@ -1,0 +1,23 @@
+easy_admin:
+    entities:
+        Avis:
+            class: App\Document\Avis
+            list:
+                fields:
+                    - id
+                    - name
+                    - surname
+                    - display
+            form:
+                fields:
+                    - name
+                    - surname
+                    - display
+            new:
+                title: 'Créer un nouvel avis'
+            edit:
+                title: 'Modifier l''avis'
+            show:
+                title: 'Détails de l''avis'
+            delete:
+                title: 'Supprimer l''avis'

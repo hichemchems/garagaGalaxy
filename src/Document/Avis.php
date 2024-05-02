@@ -2,97 +2,86 @@
 
 namespace App\Document;
 
-use Doctrine\ODM\MongoDB\Mapping as MongoDB;
+use App\Repository\AvisRepository;
+use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @MongoDB\Document(collection="avis")
- */
+#[ORM\Entity(repositoryClass: AvisRepository::class)]
 class Avis
 {
-    /**
-     * @MongoDB\Id
-     */
-    private $id;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
+    private ?int $id = null;
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    private $titre;
+    #[ORM\Column(length: 255)]
+    private ?string $name = null;
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    private $contenu;
+    #[ORM\Column(length: 255)]
+    private ?string $surname = null;
 
-    /**
-     * @MongoDB\Field(type="integer")
-     */
-    private $note;
+    #[ORM\Column(length: 255)]
+    private ?string $contenu = null;
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    private $auteur;
+    #[ORM\Column]
+    private ?bool $display = null;
 
-    /**
-     * @MongoDB\Field(type="date")
-     */
-    private $dateCreation;
-
-    // Getters and setters for all fields
-
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getTitre()
+    public function setId(string $id): static
     {
-        return $this->titre;
+        $this->id = $id;
+
+        return $this;
     }
 
-    public function setTitre($titre)
+    public function getName(): ?string
     {
-        $this->titre = $titre;
+        return $this->name;
     }
 
-    public function getContenu()
+    public function setName(string $name): static
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getSurname(): ?string
+    {
+        return $this->surname;
+    }
+
+    public function setSurname(string $surname): static
+    {
+        $this->surname = $surname;
+
+        return $this;
+    }
+
+    public function getContenu(): ?string
     {
         return $this->contenu;
     }
 
-    public function setContenu($contenu)
+    public function setContenu(string $contenu): static
     {
         $this->contenu = $contenu;
+
+        return $this;
     }
 
-    public function getNote()
+    public function isDisplay(): ?bool
     {
-        return $this->note;
+        return $this->display;
     }
 
-    public function setNote($note)
+    public function setDisplay(bool $display): static
     {
-        $this->note = $note;
-    }
+        $this->display = $display;
 
-    public function getAuteur()
-    {
-        return $this->auteur;
-    }
-
-    public function setAuteur($auteur)
-    {
-        $this->auteur = $auteur;
-    }
-
-    public function getDateCreation()
-    {
-        return $this->dateCreation;
-    }
-
-    public function setDateCreation($dateCreation)
-    {
-        $this->dateCreation = $dateCreation;
+        return $this;
     }
 }

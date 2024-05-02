@@ -2,47 +2,95 @@
 
 namespace App\Repository;
 
-use App\Entity\Avis;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Persistence\ManagerRegistry;
+use App\Document\Avis;
+use Doctrine\ODM\MongoDB\DocumentManager;
+use Doctrine\ODM\MongoDB\Repository\DocumentRepository;
 
-/**
- * @extends ServiceEntityRepository<Avis>
- *
- * @method Avis|null find($id, $lockMode = null, $lockVersion = null)
- * @method Avis|null findOneBy(array $criteria, array $orderBy = null)
- * @method Avis[]    findAll()
- * @method Avis[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
- */
-class AvisRepository extends ServiceEntityRepository
+class AvisRepository extends DocumentRepository
 {
-    public function __construct(ManagerRegistry $registry)
+
+    private $documentManager;
+
+    public function __construct(DocumentManager $documentManager)
     {
-        parent::__construct($registry, Avis::class);
+        $this->documentManager = $documentManager;
     }
 
-    //    /**
-    //     * @return Avis[] Returns an array of Avis objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('a')
-    //            ->andWhere('a.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('a.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    public function findAll(): array
+    {
+        return $this->documentManager->getRepository(AvisRepository::class)->findAll();
+    }
 
-    //    public function findOneBySomeField($value): ?Avis
-    //    {
-    //        return $this->createQueryBuilder('a')
-    //            ->andWhere('a.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+    public function findByAffiche($affiche): array
+    {
+        return $this->documentManager->getRepository(AvisRepository::class)->findBy(['affiche' => $affiche]);
+    }
+
+    public function findById($id)
+    {
+        return $this->documentManager->getRepository(AvisRepository::class)->findBy(['id' => $id])[0];
+    }
+
+     // public function findBy(array $criteria, ?array $orderBy = null, $limit = null, $offset = null): array
+    // {
+    //     return $this->documentManager->getRepository(AvisClients::class)->findBy($criteria);
+    // }
+
+    // public function findByNom($nom)
+    // {
+    //     return $this->documentManager->getRepository(AvisClients::class)->findBy(['nom' => $nom]);
+    // }
+
+    // public function findGwenn()
+    // {
+    //     return $this->documentManager->getRepository(AvisClients::class)->findBy(['prenom' => "gwenn"]);
+    // }
+
+    public function insert($name, $surname, $contenu): void
+    // on créer un objet Avis Clients et de cet avis on set les champs avec les input qu'on a récupéré
+    {
+        $avisClient = new Avis();
+        $avisClient->setName($name);
+        $avisClient->setSurname($surname);
+        $avisClient->setContenu($contenu);
+        $avisClient->setDisplay(false);
+
+
+        $this->documentManager->persist($avisClient);
+        $this->documentManager->flush();
+    }
+
+    public function toggleAffiche($id): void
+    // permet de récupérer l'avis lié à l'id $id et met l'etat inverse de l'attribut affiche : true <=> false
+    {
+        $avis = $this->findById($id);
+
+        $avis->setAffiche(!$avis->getAffiche());
+
+        //technique if
+        // $affiche_current = $avis->getAffiche();
+        // if ($affiche_current === true) {
+        //     $avis->setAffiche(false);
+        // }
+        // else {
+        //     $avis->setAffiche(true);
+        // }
+
+        //technique inline
+        // $avis->setAffiche(!$avis->getAffiche());
+
+        $this->documentManager->flush(); //valide les changements dans la base de donnée noSQL
+    }
+
+   public function delete($id): void
+   {
+        $avis = $this->findById($id);   //recupere l'avis concerné
+
+        $this->documentManager->remove($avis); //supprime l'avis en "local"
+
+        $this->documentManager->flush(); // valide les changements sur la bdd
+   }
+
 }
+
+?>
