@@ -4,7 +4,6 @@ namespace App\Controller\Admin;
 
 use App\Entity\User;
 use App\Entity\Voitures;
-use App\Document\Avis;
 use App\Document\AvisClients;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -55,6 +54,6 @@ class AdminDashboardController extends AbstractDashboardController
             yield MenuItem::linkToCrud('user', 'fas fa-map-marker-alt', User::class);
         }
         yield MenuItem::linkToCrud('voiture', 'fas fa-comments', Voitures::class);
-        yield MenuItem::linkToCrud('avis', 'fas fa-comments', AvisClients::class);
+        //yield MenuItem::linkToCrud('avis', 'fas fa-comments', AvisClients::class);
     }
 }

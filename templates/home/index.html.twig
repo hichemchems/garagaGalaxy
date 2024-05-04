@@ -42,9 +42,9 @@
     </div>
         <div class="row text-center my-3 ">
             {% for item in voiture %}
-            <div class="col-sm my-2 container">
+            <div class="col-sm my-2 container card-group">
                 <div class="card">
-                    <img src="/images/{{item.images}}" class="card-img" alt="CITROEN C3">
+                    <img src="/images/{{item.images}}" class="card-img-top" alt="CITROEN C3">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.marque }} {{ item.modele }}</h5>
                         <p class="card-text">Année : {{ item.annee }}</p>
@@ -110,19 +110,20 @@
         <h2 class="display-5 fw-bold text-center">Avis des clients</h2>
         <div id="carouselAvis" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-inner">
+            {% for item in avis %}
                 <div class="carousel-item active">
                     <div class="media">
                         <div class="media-body text-center">
-                            <h5 class="mt-0">Nom de l'auteur 1</h5>
+                            <h5 class="mt-0">{{item.Nom}}</h5>
                             <p>
-                            <span class="badge badge-primary">4 étoiles</span>
-                            <br>
-                            Texte de l'avis 1...
+                            {{item.Contenu}}
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+            {% endfor %}
+
+          {#}      <div class="carousel-item">
                     <div class="media">
                         <div class="media-body text-center">
                             <h5 class="mt-0">Nom de l'auteur 2</h5>
@@ -135,6 +136,7 @@
                     </div>
                 </div>
             </div>
+            #}
             <a class="carousel-control-prev" href="#carouselAvis" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Précédent</span>

@@ -26,6 +26,19 @@
             "migrations/.gitignore"
         ]
     },
+    "doctrine/mongodb-odm-bundle": {
+        "version": "5.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "5.0",
+            "ref": "ed0a2da4b9351025c9e6e3837a0677d73f20e424"
+        },
+        "files": [
+            "./config/packages/doctrine_mongodb.yaml",
+            "./src/Document/.gitignore"
+        ]
+    },
     "easycorp/easyadmin-bundle": {
         "version": "4.10",
         "recipe": {
@@ -34,6 +47,18 @@
             "version": "3.0",
             "ref": "b131e6cbfe1b898a508987851963fff485986285"
         }
+    },
+    "facile-it/mongodb-bundle": {
+        "version": "1.6",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "0.6",
+            "ref": "694215679ed64311cea9177b0de851a1fa0c7e74"
+        },
+        "files": [
+            "./config/packages/facile_it_mongodb.yaml"
+        ]
     },
     "phpunit/phpunit": {
         "version": "9.6",
