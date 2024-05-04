@@ -3,3 +3,8 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+# config/routes.yaml
+app_avis_crud_index:
+    path: /avis/crud
+    controller: App\Controller\AvisCrudController::new

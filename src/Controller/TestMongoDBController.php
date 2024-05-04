@@ -7,18 +7,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Exception;
 use MongoDB\Client;
-use App\Document\Avis;
+use App\Document\Avis; //pas encore créé
 use Doctrine\ODM\MongoDB\DocumentManager;
 
 
-class MongoDBController extends AbstractController
+class TestMongoDBController extends AbstractController
 {
     private $uri = 'mongodb+srv://hichemdjacta:hichemgarage123321@galaxygarageparis.qskdsk3.mongodb.net/?retryWrites=true&w=majority&appName=galaxyGarageParis';
-    
-    #[Route('/mongo/d/b', name: 'app_mongo_d_b')]
+
+    #[Route('/test-mongodb', name: 'app_test_mongo_d_b')]
     public function index(): Response
     {
-        // Replace the placeholder with your Atlas connection string
+
+         // Replace the placeholder with your Atlas connection string
 
         $client = new Client($this->uri);
 
@@ -30,7 +31,9 @@ class MongoDBController extends AbstractController
             printf($e->getMessage());
         }
 
-        return $this->render('mongo_db/index.html.twig');
-}
 
+        return $this->render('test_mongo_db/index.html.twig', [
+            'controller_name' => 'TestMongoDBController',
+        ]);
+    }
 }
