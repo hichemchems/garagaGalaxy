@@ -14,8 +14,8 @@ class AvisClientsRepository extends DocumentRepository
             $dm->getClassMetadata(AvisClients::class));
     }
 
-    public function findByIsOkay(bool $isOkay): array
+    public function findByDisplay(bool $Display): array
     {
-        return $this->findBy(['isOkay' => $isOkay]);
+        return $this->findBy(['Display' => $Display]);
     }
 }

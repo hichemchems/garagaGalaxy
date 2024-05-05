@@ -50,10 +50,6 @@ class AvisClients
         return $this->Contenu;
     }
 
-    public function getDisplay(): ?bool
-    {
-        return $this->Display;
-    }
 
     public function setDisplay(bool $Display): static
     {
@@ -62,4 +58,8 @@ class AvisClients
         return $this;
     }
 
+    public function getDisplay(): ?bool
+    {
+        return $this->Display;
+    }
 }

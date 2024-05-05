@@ -37,12 +37,12 @@
 
     <section style="background-color: aliceblue " classe="occasion my-5">
         <h2 class="display-5 fw-bold text-center">NOS OCCASIONS</h2>
-    <div class="button">  
+    {# <div class="button">  
         <a href="#" class="btn btn-primary" previewlistener="true">Nos occasions</a>
-    </div>
+    </div> #}
         <div class="row text-center my-3 ">
             {% for item in voiture %}
-            <div class="col-sm my-2 container card-group">
+            <div class="col-sm container card-group">
                 <div class="card">
                     <img src="/images/{{item.images}}" class="card-img-top" alt="CITROEN C3">
                     <div class="card-body">
@@ -57,51 +57,9 @@
 
                     </div>
                     </div>
-                </img>
             </div>
             
             {% endfor %}
-            {# <div class="col-sm my-2 container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x150" class="card-img" alt="CITROEN C3">
-                    <div class="card-body">
-                        <h5 class="card-title">Voiture</h5>
-                        <p class="card-text">Année : </p>
-                        <p class="card-text">xxxxx €</p>
-                        <p class="card-text">xxxxxx Km</p>
-                        
-                        <a href="occasion.php?id=8" class="btn btn-secondary" previewlistener="true">Détails</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm my-2">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x150" class="card-img" alt="RENAULT Trafic Fourgon">
-                    <div class="card-body">
-                        <h5 class="card-title">Voiture</h5>
-                        <p class="card-text">Année : </p>
-                        <p class="card-text">xxxxx €</p>
-                        <p class="card-text">xxxxxx Km</p>
-                        
-                        <a href="occasion.php?id=7" class="btn btn-secondary" previewlistener="true">Détails</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm my-2">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x150" class="card-img" alt="FIAT DOBLO CARGO">
-                    <div class="card-body">
-                        <h5 class="card-title">Voiture</h5>
-                        <p class="card-text">Année : </p>
-                        <p class="card-text">xxxxx €</p>
-                        <p class="card-text">xxxxxx Km</p>
-                        
-                        <a href="occasion.php?id=6" class="btn btn-secondary" previewlistener="true">Détails</a>
-                    </div>
-                </div>
-            </div> #}
         </div>
         
     </section>
@@ -110,33 +68,19 @@
         <h2 class="display-5 fw-bold text-center">Avis des clients</h2>
         <div id="carouselAvis" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-            {% for item in avis %}
-                <div class="carousel-item active">
-                    <div class="media">
-                        <div class="media-body text-center">
-                            <h5 class="mt-0">{{item.Nom}}</h5>
-                            <p>
-                            {{item.Contenu}}
-                            </p>
+                {% for item in avis %}
+                    <div class="carousel-item {% if loop.first %}active{% endif %}">{# active fait apparaitre tous les avis en meme temps --> à régler #}
+                        <div class="media">
+                            <div class="media-body text-center">
+                                <h5 class="mt-0">{{item.Nom}}</h5>
+                                <p>
+                                {{item.Contenu}}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
-
-          {#}      <div class="carousel-item">
-                    <div class="media">
-                        <div class="media-body text-center">
-                            <h5 class="mt-0">Nom de l'auteur 2</h5>
-                            <p>
-                            <span class="badge badge-primary">5 étoiles</span>
-                            <br>
-                            Texte de l'avis 2...
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
-            #}
             <a class="carousel-control-prev" href="#carouselAvis" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Précédent</span>
@@ -146,11 +90,20 @@
                 <span class="sr-only">Suivant</span>
             </a>
         </div>
-        <div class="button">  
-            <a href="#" class="btn btn-primary" previewlistener="true">Ajouter un avis</a>
-        </div>
     </section>
-</div>
+    <section class="avis">
+        <form action="{{ path('app_post_temoignage') }}" method="POST">
+            <div class="form-group form-avis">
+                <label for="exampleFormControlInput1" >Nom</label>
+                <input type="text" class="form-control" id="nom" name="nom" placeholder="Exemple : John">
+            </div>
+            <div class="form-group form-avis">
+                <label for="exampleFormControlTextarea1">Avis</label>
+                <textarea class="form-control" id="contenu" name="contenu" rows="3"></textarea>
+            </div>
+            <button type="submit">Soumettre</button>
+        </form>
+    </section>
 
 
 
