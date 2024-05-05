@@ -2,12 +2,12 @@
 
 namespace App\Form;
 
-use App\Document\AvisClients;
+use App\Entity\AvisClients;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class AvisClientsType extends AbstractType
+class AvisClients1Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
