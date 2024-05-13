@@ -4,7 +4,7 @@
     <section class="banner">
         <div class="title">
             <h1>Garage Galaxy</h1>
-            <h2 class="slogan">Here is some content about the website.</h2>
+           
         </div>
     </section>
 {# 
@@ -35,7 +35,8 @@
 
     </section>
 
-    <section style="background-color: aliceblue " classe="occasion my-5">
+    <section style="background-color:#f8f9fa" classe="occasion my-5">
+    
         <h2 class="display-5 fw-bold text-center">NOS OCCASIONS</h2>
     {# <div class="button">  
         <a href="#" class="btn btn-primary" previewlistener="true">Nos occasions</a>
@@ -44,7 +45,8 @@
             {% for item in voiture %}
             <div class="col-sm container card-group">
                 <div class="card">
-                    <img src="/images/{{item.images}}" class="card-img-top" alt="CITROEN C3">
+                {#} <img src="/images/{{item.images}}" class="card-img-top" alt="CITROEN C3">{#}
+                <img src="/images/audi-car12.jpg">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.marque }} {{ item.modele }}</h5>
                         <p class="card-text">Année : {{ item.annee }}</p>
@@ -58,6 +60,7 @@
                     </div>
                     </div>
             </div>
+            
             
             {% endfor %}
         </div>
